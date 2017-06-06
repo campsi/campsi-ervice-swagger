@@ -8,11 +8,11 @@
     "url": "git://github.com/campsi/campsi-service-swagger.git"
   },
   "dependencies": {
-    "campsi": "git://github.com/campsi/campsi.git",
     "for-in": "^1.0.2",
     "express": "^4.15.3"
   },
   "devDependencies": {
+    "campsi": "git://github.com/campsi/campsi.git",
     "depcheck": "^0.6.7",
     "eslint": "^3.19.0",
     "eslint-plugin-indexof": "^0.1.1"
