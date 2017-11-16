@@ -8,19 +8,28 @@
     "url": "git://github.com/campsi/campsi-service-swagger.git"
   },
   "dependencies": {
-    "for-in": "^1.0.2",
-    "express": "^4.15.3"
+    "debug": "^3.1.0",
+    "express": "^4.15.3",
+    "for-in": "^1.0.2"
   },
   "devDependencies": {
     "campsi": "git://github.com/campsi/campsi.git",
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
+    "config": "^1.28.1",
+    "coveralls": "^3.0.0",
     "depcheck": "^0.6.7",
     "eslint": "^3.19.0",
-    "eslint-plugin-indexof": "^0.1.1"
+    "eslint-plugin-indexof": "^0.1.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^4.0.1"
   },
   "scripts": {
+    "cover": "istanbul cover _mocha \"./test/**/!(index).js\" -- --exit",
+    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls",
     "depcheck": "depcheck --ignore-dirs=SwaggerUI",
-    "lint": "./node_modules/eslint/bin/eslint.js --cache lib/*.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "./node_modules/eslint/bin/eslint.js --cache lib/*.js test/**",
+    "test": "mocha \"./test/**/!(index).js\" --exit"
   },
   "author": "",
   "license": "MIT",
