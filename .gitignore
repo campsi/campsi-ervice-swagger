@@ -1,5 +1,4 @@
-.idea
+.idea/
+coverage/
 node_modules/
 .eslintcache
-test
-coverage/
