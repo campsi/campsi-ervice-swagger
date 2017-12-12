@@ -57,4 +57,15 @@ describe('Swagger API', () => {
                 });
         });
     });
+    describe('/GET swagger', () => {
+        it('it should return an html file', (done) => {
+            chai.request(campsi.app)
+                .get('/swagger')
+                .end((err, res) => {
+                    res.should.have.status(200);
+                    res.should.be.html;
+                    done();
+                });
+        });
+    });
 });

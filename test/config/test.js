@@ -22,9 +22,7 @@ module.exports = {
     services: {
         swagger: {
             title: 'Documentation',
-            options: {
-
-            }
+            ui: true
         }
     }
 };
