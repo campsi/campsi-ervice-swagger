@@ -8,7 +8,11 @@ module.exports = {
         version: '1.0.0',
         description: 'API de test avec les pizzas Arezzo !',
         base_url: host,
-        mongoURI: 'mongodb://localhost:27017/relationships',
+        mongo: {
+            'host': 'localhost',
+            'port': 27017,
+            'name': 'relationships'
+        },
         license: {
             name: 'MIT',
             url: 'https://opensource.org/licenses/mit-license.php'

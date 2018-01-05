@@ -25,10 +25,10 @@
     "mocha": "^4.0.1"
   },
   "scripts": {
-    "cover": "istanbul cover _mocha \"./test/**/!(index).js\" -- --exit",
+    "cover": "istanbul --include-all-sources cover -x \"static/**\" _mocha \"./test/**/!(index).js\" -- --exit",
     "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls",
-    "depcheck": "depcheck --ignore-dirs=SwaggerUI",
-    "lint": "./node_modules/eslint/bin/eslint.js --cache lib/*.js test/**",
+    "depcheck": "depcheck --ignore-dirs=static",
+    "lint": "./node_modules/eslint/bin/eslint.js --cache lib/** test/**",
     "test": "mocha \"./test/**/!(index).js\" --exit"
   },
   "author": "",
