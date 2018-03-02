@@ -2,12 +2,10 @@ const host = 'http://localhost:3000';
 
 module.exports = {
     port: 3000,
-    host: host,
     campsi: {
         title: 'Test Arezzo',
-        version: '1.0.0',
         description: 'API de test avec les pizzas Arezzo !',
-        base_url: host,
+        publicURL: host,
         mongo: {
             'host': 'localhost',
             'port': 27017,
